@@ -9,6 +9,21 @@ package com.bridgelabs;
 import java.util.Scanner;
 
 public class LargestNumber {
+	
+	// Method body to find the largest number.
+	public static void CheckLargest(int x, int y, int z) {
+		
+		if(x>y && x>z) {
+			System.out.println(x + " is greatest among " + y + " and " + z);
+		}
+		else if (y>x && y>z) {
+			System.out.println(y + " is greatest among " + x + " and " + z);			
+		}
+		else {
+			System.out.println(z + " is greatest among " + x + " and " + y);
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -23,16 +38,8 @@ public class LargestNumber {
 		System.out.println("Enter third number: ");
 		int num3 = sc.nextInt();
 		
-		// Finding the largest number.
-		if(num1>num2 && num1>num3) {
-			System.out.println(num1 + " is greatest among " + num2 + " and " + num3);
-		}
-		else if (num2>num1 && num2>num3) {
-			System.out.println(num2 + " is greatest among " + num1 + " and " + num3);			
-		}
-		else {
-			System.out.println(num3 + " is greatest among " + num1 + " and " + num2);
-		}
+		CheckLargest(num1, num2, num3);
+		
 		sc.close();
 
 	}
